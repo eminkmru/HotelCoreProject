@@ -23,13 +23,13 @@ namespace HotelCoreProject.Areas.Admin.Controllers
         public IActionResult AddDestination(Destination destination)
         {
             destinationManager.TAdd(destination);
-            return RedirectToAction("Index");
+            return RedirectToAction("Destination","Admin");
         }
         public IActionResult DeleteDestination(int id)
         {
             var values = destinationManager.TGetById(id);
             destinationManager.TDelete(values);
-            return RedirectToAction("Index");
+            return RedirectToAction("Destination", "Admin");
         }
         [HttpGet]
         public IActionResult UpdateDestination(int id)
@@ -41,7 +41,7 @@ namespace HotelCoreProject.Areas.Admin.Controllers
         public IActionResult UpdateDestination(Destination destination)
         {
             destinationManager.TUpdate(destination);
-            return RedirectToAction("Index");
+            return RedirectToAction("Destination", "Admin");
         }
     }
 }
