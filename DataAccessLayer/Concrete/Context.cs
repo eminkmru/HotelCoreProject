@@ -13,7 +13,7 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=EMIN;database=HotelDB;integrated security=true;");
+            optionsBuilder.UseSqlServer("server=.;database=HotelDB;integrated security=true;");
         }
 
         public DbSet<About> Abouts { get; set; }
