@@ -12,7 +12,7 @@ namespace HotelCoreProject.Areas.Admin.Controllers
 
         public CommentController(ICommentSercive commentSercive)
         {
-            //_commentSercive = commentSercive;
+            _commentSercive = commentSercive;
         }
 
         public IActionResult Index()
