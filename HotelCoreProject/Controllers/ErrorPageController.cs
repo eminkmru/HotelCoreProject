@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace HotelCoreProject.Areas.Admin.Controllers
+namespace HotelCoreProject.Controllers
 {
     public class ErrorPageController : Controller
     {
