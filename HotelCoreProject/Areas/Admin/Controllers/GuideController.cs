@@ -34,7 +34,7 @@ namespace HotelCoreProject.Areas.Admin.Controllers
             if(result.IsValid)
             {
                 _guideService.TAdd(guide);
-                return RedirectToAction("Index");
+                return RedirectToAction("Guid", "Admin");
             }
             else
             {
@@ -44,10 +44,6 @@ namespace HotelCoreProject.Areas.Admin.Controllers
                 }
                 return View();
             }
-            _guideService.TAdd(guide);
-            return RedirectToAction("Index");
-            _guideService.TAdd(guide);
-            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -61,17 +57,17 @@ namespace HotelCoreProject.Areas.Admin.Controllers
         public IActionResult EditGuide(Guide guide)
         {
             _guideService.TUpdate(guide);
-            return RedirectToAction("Index");
+            return RedirectToAction("Guid","Admin");
         }
 
         public IActionResult ChangeToTrue(int id)
         {
-            return RedirectToAction("Index");
+            return RedirectToAction("Guid", "Admin");
         }
 
         public IActionResult ChangeToFalse(int id)
         {
-            return RedirectToAction("Index");
+            return RedirectToAction("Guid","Admin");
         }
     }
 }
